@@ -9,15 +9,16 @@ def add_element_to_end_of_list(l, element):
     return l
 
 def add_element_to_start_of_list(l, element):
-    new_list = [element]
-    new_list.append(l)
-    return new_list
+    l.insert(0, element)
+    return l
 
 def remove_element_from_end_of_list(l):
-    return l[0:len(l)-1]
+    l.pop()
+    return l
 
 def remove_element_from_start_of_list(l):
-    return l[1:len(l)]
+    del l[0]
+    return l
 
 def retrieve_first_element_from_list(l):
     return l[0]
